@@ -5,6 +5,7 @@ import { Post, Wall } from '../db/models'
 
 // Create post
 router.post('/create', async (req, res) => {
+  console.log('dasdasdddasdasas')
   //waits for this code block to run finish before executing
   const [newPost, associatedWall] = await Promise.all([
     Post.create({ content: req.body.content }),
